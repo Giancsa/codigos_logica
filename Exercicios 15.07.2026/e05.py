@@ -10,7 +10,7 @@ Menor que 5 - Reprovado """
 
 nota = float(input("Digite a nota do aluno: "))
 while nota >10:
-    nota = float(input("Nota maior que a permitida, digite novamente "))
+    nota = float(input("Nota maior que a máxima permitida, digite novamente "))
 if nota >=9:
     print("Excelente")
 elif nota >=7:
