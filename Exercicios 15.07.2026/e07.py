@@ -13,10 +13,11 @@ Acesso negado. """
 
 #BASE DE DADOS
 bd_usuarios = ["admin", "admin1", "admin2"]
+
+#CRIAÇÃO DE SENHA
 print("Vamos fazer seu cadastro")
 print("============================")
 
-#CRIAÇÃO DE SENHA
 usuario = input("Digite o usuário desejado: ")
 while usuario in bd_usuarios:
     print("Nome de usuário já existe, escolha outro")
