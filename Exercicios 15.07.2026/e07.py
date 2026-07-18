@@ -13,6 +13,7 @@ Acesso negado. """
 
 print("Vamos fazer seu cadastro")
 print("============================")
+
 #CRIAÇÃO DE SENHA
 usuario = input("Digite o usuário desejado: ")
 senha = input("Agora digite a senha: ")

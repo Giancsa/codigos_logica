@@ -8,4 +8,9 @@ Olá João, você tem 20 anos """
 
 name = "Jõao"
 age = 20
+#Interpolando usando "f" (string formtada)
 print(f"Olá {name}, você tem: {age} anos")
+
+# Em produção
+saida = (f"Olá {name}, você tem: {age} anos")
+print("saida")

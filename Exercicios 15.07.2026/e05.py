@@ -8,13 +8,16 @@ Nota - Resultado
 5 a 6.9 - Recuperação 
 Menor que 5 - Reprovado """
 
-nota = float(input("Digite a nota do aluno: "))
+nota = input("Digite a nota do aluno: ")
 while nota >10:
-    nota = float(input("Nota maior que a máxima permitida, digite novamente "))
+    nota = (input("Nota maior que a máxima permitida, digite novamente "))
+
 if nota >=9:
     print("Excelente")
 elif nota >=7:
     print("Aprovado")
+elif nota >=5:
+    print("Recuperação")
 else:
-    print("Rcuperação")
+    print("Reprovado")
 
