@@ -11,11 +11,16 @@ Acesso permitido.
 Caso contrário: 
 Acesso negado. """
 
+#BASE DE DADOS
+bd_usuarios = ["admin", "admin1", "admin2"]
 print("Vamos fazer seu cadastro")
 print("============================")
 
 #CRIAÇÃO DE SENHA
 usuario = input("Digite o usuário desejado: ")
+while usuario in bd_usuarios:
+    print("Nome de usuário já existe, escolha outro")
+    usuario = input("Digite o usuário desejado: ")
 senha = input("Agora digite a senha: ")
 senha2 = input("Digite a senha novamente: ")
 while senha != senha2:
@@ -31,7 +36,7 @@ print("=======ACESSO AO SISTEMA========")
 usuario_login = input("Digite o usuario para acesso: ")
 senha_acesso = input("Digite sua senha: ")
 
-while senha_acesso != senha2 or usuario_login != usuario:
+while not (senha_acesso == senha and usuario_login == usuario):
     print("Usuário ou senha inválido, digite novamente:")
     usuario_login = input("Digite o usuario para acesso: ")
     senha_acesso = input("Digite sua senha: ")
@@ -39,5 +44,3 @@ else:
     print("============================")
     print("   Acesso liberado!")
     print("============================")
-
-print("senha: ", senha, "senha_acesso: ", senha_acesso)

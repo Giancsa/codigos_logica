@@ -9,6 +9,7 @@ Nota - Resultado
 Menor que 5 - Reprovado """
 
 nota = input("Digite a nota do aluno: ")
+nota = float(nota.replace(",", "."))
 while nota >10:
     nota = (input("Nota maior que a máxima permitida, digite novamente "))
 
