@@ -15,7 +15,7 @@ Não tem direito ao desconto. """
 idade = 65
 estudante = False
 
-if idade >= 60 or estudante == True:
+if idade >= 60 or estudante:
    print("Tem direito ao desconto")
 else:
    ("Não tem direito ao desconto")
