@@ -1,6 +1,7 @@
-numero = int(input("Digite o numero desejado para tabuada "))
+numero = int(input("Digite o numero desejado para tabuada: "))
+num2 = int(input("Digite até quanto a tabuada irá: "))
 
-for x in range (11): 
-    print(x, "x", numero, "=", x*numero)
-    print(f"{x} x {numero} = {x*numero}")
-    print("")
+for x in range (num2 + 1): 
+    #print(f"{x} x {numero} = {x*numero}")
+    print(x*numero)
+    
