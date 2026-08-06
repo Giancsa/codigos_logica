@@ -17,3 +17,6 @@ produtos = [{"nome": "queijo",
            "categoria":"nao_pereciveis",
            },]
 print(produtos[1])
+
+for produto in produtos:
+    print(f"{produto["nome"]} - R${produto["preco"]}")
