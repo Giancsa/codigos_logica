@@ -2,6 +2,8 @@
 e consultar dos dados no dicionário através do e-mail'''
 import re
 regex_cpf = r"^\d{3}\.?\d{3}\.?\d{3}-?\d{2}$"
+regex_nascimento = r"^\d{2}/\d{2}/\d{4}$"
+regex_email = regex_email = r"^[\w\.-]+@[\w\.-]+\.\w+$"
 
 while True:
 
@@ -22,3 +24,16 @@ while True:
             validacao = re.fullmatch(regex_cpf, cpf)
           else:
             nome =input("Digite o nome para cadastro: ")
+            
+            Nascimeno = input("Digite sua data de nascimento(DD/MM/AAAA): ")
+            val_nasc = re.fullmatch(regex_nascimento, Nascimeno)
+            while val_nasc == None:
+              print("Formato de nascimento inválido!")
+              Nascimeno = input("Digite sua data de nascimento novamente: ")
+              val_nasc = re.fullmatch(regex_nascimento, Nascimeno)
+            else:
+              email = input("Digite seu E-mail para cadastro: ")
+              val_email = re.fullmatch (regex_email, email)
+              while val_email == None:
+                email = print("Formato de E-mail inválido, digite novamente: ")
+                val_email = re.fullmatch (regex_email, email)
