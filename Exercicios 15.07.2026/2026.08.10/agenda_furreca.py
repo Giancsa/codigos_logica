@@ -6,6 +6,15 @@
 ############################################
 
 import subprocess
+import random
+
+# numero = random.randint(1, 1000)
+
+# Baco de dados
+database = {
+    "1": { "name": "Joca da Silva", "contact": "(21) 998877665"},
+    "120": { "name": "Mariana Sirilampo", "contact": "mariana@sirilampo.com.br"}
+}
 
 def cls():
     subprocess.run("cls", shell=True)
@@ -13,9 +22,16 @@ def cls():
 def new_contact():
     cls()
     print("[ AGENDA FURRECA - NOVO CONTATO ]")
+    
+    print("\nDigite os dados do contato:\n")
 
-    # ...]
+    name = input(" • Nome: ")
+    contact = input(" • Contato: ")
+    key = str(random.randint(1, 1000))
 
+    database[key] = dict(name = name, contact = contact)
+
+    print(f"\nUsuário com ID {key} adicionado!")
     input("Tecle [Enter] para continuar")
     main()
 
@@ -23,7 +39,7 @@ def list_contacts():
     cls()
     print("[ AGENDA FURRECA - LISTA CONTATOS ]")
 
-    # ...]
+    # ...
     
     input("Tecle [Enter] para continuar")
     main()
@@ -32,7 +48,7 @@ def edit_contact():
     cls()
     print("[ AGENDA FURRECA - EDITA CONTATO ]")
 
-    # ...]
+    # ...
     
     input("Tecle [Enter] para continuar")
     main()
@@ -41,7 +57,7 @@ def delete_contact():
     cls()
     print("[ AGENDA FURRECA - APAGA CONTATO ]")
 
-    # ...]
+    # ...
     
     input("Tecle [Enter] para continuar")
     main()
@@ -55,6 +71,8 @@ def main(erro = str()):
         if erro:
             print(erro)
         erro = str()
+        # Debug
+        print(database)
         print('''
 Opções:
 
