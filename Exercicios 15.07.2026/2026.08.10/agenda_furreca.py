@@ -8,6 +8,7 @@
 # Importa "subprocess" e "os" que permitem executar comandos do sistema
 import subprocess
 import os
+import json
 
 # Importa "random" para gerar números aleatórios
 import random
@@ -23,7 +24,20 @@ def cls():
     else:
         # Outros sistemas como Linux e MacOS
         subprocess.run("clear", shell=True)
+#Salvar database
+def save_database():
+    with open("database.json", "w", encoding="utf-8") as file:
+        json.dump(database, file, indent=4, ensure_ascii=False)
 
+#Carregar database
+def load_database():
+    global database
+
+    try:
+        with open("database.json", "r", encoding="utf-8") as file:
+            database = json.load(file)
+    except FileNotFoundError:
+        database = {}
 
 def new_contact():
     # Cadastra novo contato
@@ -58,6 +72,7 @@ def new_contact():
 
     # Salva o novo cadastro no formato "dict"
     database[key] = dict(name=name, contact=contact)
+    save_database()
 
     # Confirmação
     print(f"\nUsuário com ID {key} adicionado!")
@@ -126,6 +141,7 @@ def edit_contact():
 
     # Atualizar
     database[key] = dict(name = name, contact = contact)
+    save_database()
 
     print()
     print("Contato atualizado!")
@@ -153,6 +169,7 @@ def delete_contact():
     option = input("Tem certeza que deseja apagar [S/N]? ")
     if option.upper() == "S":
         del database[key]
+        save_database()
         print("Contato apagado!")
     else:
         print()
@@ -209,6 +226,9 @@ Opções:
                 error = "Digite uma opção válida!"
                 main(error)
 
-
+#Carrega a database
+load_database()
 # "Roda" o programa
 main()
+
+
