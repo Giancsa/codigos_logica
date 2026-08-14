@@ -18,7 +18,7 @@ def multiplication():
     num1 = float(input("Digite o primeiro número: "))
     num2 = float(input("Digite o segundo número: "))
     result = num1*num2
-    print(result)
+    print("O resultado é:", result)
     print()
     opcao = input("Deseja fazer outra multiplicação? S/N ")
     if opcao.upper() == "S":
@@ -35,10 +35,13 @@ def division():
     print("\n[ADIÇÃO]\n")
     num1 = float(input("Digite o primeiro número: "))
     num2 = float(input("Digite o segundo número: "))
-    result = num1+num2
-    print(result)
+     
+    while num2 ==0:
+     num2 = float(input("Zero não pode ser um divisor, digite novamente!: "))
+    result = num1/num2
+    print("O resultado é:", result)
     print()
-    opcao = input("Deseja fazer outra adição? S/N ")
+    opcao = input("Deseja fazer outra divisão? S/N ")
     if opcao.upper() == "S":
             addition()
     else:
@@ -67,7 +70,7 @@ def subtraction ():
     num1 = float(input("Digite o primeiro número: "))
     num2 = float(input("Digite o segundo número: "))
     result = num1-num2
-    print(result)
+    print("O resultado é:", result)
     print()
     opcao = input("Deseja fazer outra adição? S/N ")
     if opcao.upper() == "S":
