@@ -31,7 +31,20 @@ def multiplication():
     
 def division():
     cls()
-    pass
+    cls()
+    print("\n[ADIÇÃO]\n")
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
+    result = num1+num2
+    print(result)
+    print()
+    opcao = input("Deseja fazer outra adição? S/N ")
+    if opcao.upper() == "S":
+            addition()
+    else:
+        main()
+
+    
 
 def addition():
     cls()
