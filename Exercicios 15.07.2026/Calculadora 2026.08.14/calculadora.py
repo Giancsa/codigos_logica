@@ -32,12 +32,15 @@ def multiplication():
 def division():
     cls()
     cls()
-    print("\n[ADIÇÃO]\n")
+    print("\n[DIVISÃO]\n")
     num1 = float(input("Digite o primeiro número: "))
     num2 = float(input("Digite o segundo número: "))
      
     while num2 ==0:
      num2 = float(input("Zero não pode ser um divisor, digite novamente!: "))
+     cls()
+    print("Digite o primeiro número", num1)
+    print("Digite o primeiro número", num2)
     result = num1/num2
     print("O resultado é:", result)
     print()
