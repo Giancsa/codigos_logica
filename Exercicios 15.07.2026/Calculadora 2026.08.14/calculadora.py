@@ -17,8 +17,10 @@ def multiplication():
     print("\n[MULTIPLICAÇÃO]\n")
     num1 = float(input("Digite o primeiro número: "))
     num2 = float(input("Digite o segundo número: "))
+    cls()
     result = num1*num2
-    print("O resultado é:", result)
+    print("\n[RESULTADO]\n")
+    print(f"{num1} x {num2} =", result)
     print()
     opcao = input("Deseja fazer outra multiplicação? S/N ")
     if opcao.upper() == "S":
@@ -31,7 +33,6 @@ def multiplication():
     
 def division():
     cls()
-    cls()
     print("\n[DIVISÃO]\n")
     num1 = float(input("Digite o primeiro número: "))
     num2 = float(input("Digite o segundo número: "))
@@ -39,14 +40,15 @@ def division():
     while num2 ==0:
      num2 = float(input("Zero não pode ser um divisor, digite novamente!: "))
      cls()
-    print("Digite o primeiro número", num1)
-    print("Digite o segundo número", num2)
-    result = num1/num2
-    print("O resultado é:", result)
-    print()
+    else:
+        cls()
+        result = num1/num2
+        print("\n[RESULTADO]\n")
+        print(f"{num1} / {num2} =",result)
+        print()
     opcao = input("Deseja fazer outra divisão? S/N ")
     if opcao.upper() == "S":
-            addition()
+            division()
     else:
         main()
 
