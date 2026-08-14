@@ -13,18 +13,56 @@ def cls():
 
 #CONTA MULTIPLICAÇÃO
 def multiplication():
-    pass
-
+    cls()
+    print("\n[MULTIPLICAÇÃO]\n")
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
+    result = num1*num2
+    print(result)
+    print()
+    opcao = input("Deseja fazer outra multiplicação? S/N ")
+    if opcao.upper() == "S":
+        multiplication()
+    else:
+        main()
+    
+    
+     
+    
 def division():
+    cls()
     pass
 
 def addition():
-    pass
+    cls()
+    print("\n[ADIÇÃO]\n")
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
+    result = num1+num2
+    print(result)
+    print()
+    opcao = input("Deseja fazer outra adição? S/N ")
+    if opcao.upper() == "S":
+            addition()
+    else:
+        main()
+    
 
 def subtraction ():
-    pass
+    cls()
+    print("\n[SUBTRAÇÃO]\n")
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
+    result = num1-num2
+    print(result)
+    print()
+    opcao = input("Deseja fazer outra adição? S/N ")
+    if opcao.upper() == "S":
+        addition()
+    else:
+        main()
 
-def main():
+def main(error=str()):
     #Programa principal
     while True:
         cls()
@@ -33,12 +71,37 @@ def main():
         print('''Digite a opção desejada: 
         
         1 - Soma
-        2 - Multiplicação
-        3 - Divisão
-        4 - Multiplicação''')
+        2 - Subtração
+        3 - Multiplicação
+        4 - Divisão
+        5 - Encerrar o programa e fechar\n''')
 
-        opcao = float(input("Digite uma opção: "))
-        break
+        if error:
+            print("-----ERRO DIGITE UMA OPÇÃO VÁLIDA!-----")
+
+        opcao = input("\nDigite uma opção: ")
+
+        match opcao:
+            case "1":
+                addition()
+            case "2":
+                subtraction()
+            case "3":
+                multiplication()
+            case "4":
+                division()
+            case "5":
+                cls()
+                print("Programa encerrado, obrigado por usar\n")
+                exit()
+            case _:
+                error = "Opção inválida, digite novamente!"
+                main(error)
+            
+
+
+
+
 main()
 
 
