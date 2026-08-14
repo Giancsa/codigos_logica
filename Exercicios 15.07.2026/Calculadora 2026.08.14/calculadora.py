@@ -40,7 +40,7 @@ def division():
      num2 = float(input("Zero não pode ser um divisor, digite novamente!: "))
      cls()
     print("Digite o primeiro número", num1)
-    print("Digite o primeiro número", num2)
+    print("Digite o segundo número", num2)
     result = num1/num2
     print("O resultado é:", result)
     print()
