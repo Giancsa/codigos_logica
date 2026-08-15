@@ -14,7 +14,7 @@ def cls():
 #CONTA MULTIPLICAÇÃO
 def multiplication():
     cls()
-    print("\n[MULTIPLICAÇÃO]\n")
+    print("\n[MULTIPLICAÇÃO]")
     num1 = float(input("Digite o primeiro número: "))
     num2 = float(input("Digite o segundo número: "))
     cls()
@@ -31,7 +31,7 @@ def multiplication():
 #Conta divisão    
 def division():
     cls()
-    print("\n[DIVISÃO]\n")
+    print("\n[DIVISÃO]")
     num1 = float(input("Digite o primeiro número: "))
     num2 = float(input("Digite o segundo número: "))
      
@@ -54,7 +54,7 @@ def division():
 #Conta adição
 def addition():
     cls()
-    print("\n[ADIÇÃO]\n")
+    print("\n[ADIÇÃO]")
     num1 = float(input("Digite o primeiro número: "))
     num2 = float(input("Digite o segundo número: "))
     cls()
@@ -71,12 +71,12 @@ def addition():
 #Conta subtração
 def subtraction ():
     cls()
-    print("\n[SUBTRAÇÃO]\n")
+    print("\n[SUBTRAÇÃO]")
     num1 = float(input("Digite o primeiro número: "))
     num2 = float(input("Digite o segundo número: "))
     cls()
     result = num1-num2
-    print("\n[RESULTADO]\n")
+    print("\n[RESULTADO]")
     print(f"{num1} - {num2} =", result)
     print()
     opcao = input("Deseja fazer outra adição? S/N ")
@@ -91,12 +91,12 @@ def tabuada():
     numero = int(input("Digite o numero desejado para tabuada: "))
     num2 = int(input("Digite até quanto a tabuada irá: "))
     cls()
-    print("\n[RESULTADO]\n")
+    print("\n[RESULTADO]")
     for x in range (num2 + 1): 
      print(f"{x} x {numero} = {x*numero}")
     
 
-    opcao = input("\nDeseja fazer outra tabuada? S/N \n")
+    opcao = input("\nDeseja fazer outra tabuada? S/N")
     if opcao.upper() == "S":
         tabuada()
     else:
