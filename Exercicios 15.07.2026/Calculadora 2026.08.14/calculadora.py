@@ -59,7 +59,9 @@ def addition():
     print("\n[ADIÇÃO]\n")
     num1 = float(input("Digite o primeiro número: "))
     num2 = float(input("Digite o segundo número: "))
+    cls()
     result = num1+num2
+    print("\n[RESULTADO]\n")
     print(f"{num1} + {num2} =", result)
     print()
     opcao = input("Deseja fazer outra adição? S/N ")
@@ -76,6 +78,7 @@ def subtraction ():
     num2 = float(input("Digite o segundo número: "))
     cls()
     result = num1-num2
+    print("\n[RESULTADO]\n")
     print(f"{num1} - {num2} =", result)
     print()
     opcao = input("Deseja fazer outra adição? S/N ")
@@ -99,7 +102,7 @@ def main(error=str()):
         5 - Encerrar o programa e fechar\n''')
 
         if error:
-            print("-----ERRO DIGITE UMA OPÇÃO VÁLIDA!-----")
+            print("-----ERRO!! DIGITE UMA OPÇÃO VÁLIDA!-----")
 
         opcao = input("\nDigite uma opção: ")
 
