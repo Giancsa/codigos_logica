@@ -87,6 +87,22 @@ def subtraction ():
     else:
         main()
 
+def tabuada():
+    cls()
+    numero = int(input("Digite o numero desejado para tabuada: "))
+    num2 = int(input("Digite até quanto a tabuada irá: "))
+    cls()
+    print("\n[RESULTADO]\n")
+    for x in range (num2 + 1): 
+     print(f"{x} x {numero} = {x*numero}")
+    
+
+    opcao = input("\nDeseja fazer outra tabuada? S/N \n")
+    if opcao.upper() == "S":
+        tabuada()
+    else:
+        main()
+
 def main(error=str()):
     #Programa principal
     while True:
@@ -99,7 +115,8 @@ def main(error=str()):
         2 - Subtração
         3 - Multiplicação
         4 - Divisão
-        5 - Encerrar o programa e fechar\n''')
+        5 - Tabuada
+        6 - Encerrar o programa e fechar\n''')
 
         if error:
             print("-----ERRO!! DIGITE UMA OPÇÃO VÁLIDA!-----")
@@ -116,6 +133,8 @@ def main(error=str()):
             case "4":
                 division()
             case "5":
+                tabuada()    
+            case "6":
                 cls()
                 print("Programa encerrado, obrigado por usar\n")
                 exit()
