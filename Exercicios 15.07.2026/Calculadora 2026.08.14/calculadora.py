@@ -60,7 +60,7 @@ def addition():
     num1 = float(input("Digite o primeiro número: "))
     num2 = float(input("Digite o segundo número: "))
     result = num1+num2
-    print(result)
+    print(f"{num1} + {num2} =", result)
     print()
     opcao = input("Deseja fazer outra adição? S/N ")
     if opcao.upper() == "S":
@@ -76,7 +76,7 @@ def subtraction ():
     num2 = float(input("Digite o segundo número: "))
     cls()
     result = num1-num2
-    print("O resultado é:", result)
+    print(f"{num1} - {num2} =", result)
     print()
     opcao = input("Deseja fazer outra adição? S/N ")
     if opcao.upper() == "S":
