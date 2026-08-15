@@ -28,9 +28,7 @@ def multiplication():
     else:
         main()
     
-    
-     
-    
+#Conta divisão    
 def division():
     cls()
     print("\n[DIVISÃO]\n")
@@ -53,7 +51,7 @@ def division():
         main()
 
     
-
+#Conta adição
 def addition():
     cls()
     print("\n[ADIÇÃO]\n")
@@ -70,7 +68,7 @@ def addition():
     else:
         main()
     
-
+#Conta subtração
 def subtraction ():
     cls()
     print("\n[SUBTRAÇÃO]\n")
@@ -87,6 +85,7 @@ def subtraction ():
     else:
         main()
 
+#Tabuada
 def tabuada():
     cls()
     numero = int(input("Digite o numero desejado para tabuada: "))
@@ -107,7 +106,7 @@ def main(error=str()):
     #Programa principal
     while True:
         cls()
-        print("\n[CALCULADORA: ADIÇÃO, SUBTRAÇÃO, MULTIPLICAÇÃO, DIVISÃO]\n")
+        print("\n[CALCULADORA: ADIÇÃO, SUBTRAÇÃO, MULTIPLICAÇÃO, DIVISÃO] e TABUADA\n")
 
         print('''Digite a opção desejada: 
         
@@ -142,9 +141,6 @@ def main(error=str()):
                 error = "Opção inválida, digite novamente!"
                 main(error)
             
-
-
-
 
 main()
 
